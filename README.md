@@ -23,10 +23,10 @@ The following information is collected about every game:
 A batch script is utilized with Windows Task Scheduler to automatically run the program once a week in order to make sure the database information is up to date.
 
 ## Modules
-[main.py](link): Iterates through the list of ranked board games on BoardGameGeek.com, collects and saves data about each game to a csv file, copies final csv file to a PostgreSQL database. 
+[main.py](main.py): Iterates through the list of ranked board games on BoardGameGeek.com, collects and saves data about each game to a csv file, copies final csv file to a PostgreSQL database. 
 
-[data_handler.py](link): Contains functions that locate and return game ids on a BGG page, request from the BGG public API specific information about each game id, write returned data to a new csv file.
+[data_handler.py](data_handler.py): Contains functions that locate and return game ids on a BGG page, request from the BGG public API specific information about each game id, write returned data to a new csv file.
 
-[gamepage_parser.py](link): Contains functions that search the parsed API page data for specific information about a game and return it.
+[gamepage_parser.py](gamepage_parser.py): Contains functions that search the parsed API page data for specific information about a game and return it.
 
-[db_connector.py](link): Contains functions that connect to a PostgreSQL database and copy the data from a csv file to a predefined table in the database.
+[db_connector.py](db_connector.py): Contains functions that connect to a PostgreSQL database and copy the data from a csv file to a predefined table in the database.
